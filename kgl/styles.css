@@ -1,0 +1,22 @@
+#main {
+    margin-top: 200px;
+}
+
+#loginCard {
+    /* background-color: rgb(225, 223, 221); */
+}
+
+
+#dashboard-container {
+    margin-top: 10px;
+}
+
+.kgl-headers {
+    background-color: beige;
+}
+body {
+    background-color: beige;
+}
+h1,h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

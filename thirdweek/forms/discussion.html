@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form to Table Example</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Form to Table Example</h2>
+  
+  <!-- Form -->
+  <form id="dataForm">
+    <input type="text" id="name" placeholder="Enter name" required />
+    <input type="number" id="age" placeholder="Enter age" required />
+    <button type="submit">Add to Table</button>
+  </form>
+
+  <br>
+
+  <!-- Table -->
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tr>
+<td>akol</td>
+<td>19</td>
+<td>sleep</td>
+    </tr>
+      <!-- Rows will be added here -->
+    </tbody>
+  </table>
+
+  <script>
+    // Get the form and table body elements
+    const form = document.getElementById('dataForm');
+    const tableBody = document.querySelector('#dataTable tbody');
+
+    // Handle form submission
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent page reload
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const age = document.getElementById('age').value;
+
+      // Create a new row
+      const row = tableBody.insertRow();
+
+      // Add cells to the row
+      row.innerHTML = `
+        <td>${name}</td>
+        <td>${age}</td>
+        <td>
+          <button onclick="deleteRow(this)">Delete</button>
+        </td>
+      `;
+
+      // Clear the form
+      form.reset();
+    });
+
+    // Function to delete a row
+    function deleteRow(button) {
+      const row = button.parentElement.parentElement;
+      row.remove();
+    }
+  </script>
+
+</body>
+</html>

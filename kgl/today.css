@@ -1,0 +1,29 @@
+.today{
+    display: none;
+}
+
+
+body{
+
+background-color: beige;
+
+}
+
+#btn{
+    text-decoration-color: black;
+    background-color: goldenrod;
+}
+#btn.hover{
+    background-color: pink;
+    transform: scale(1.1);
+}
+
+.paragraph{
+    display:none ;
+    color: brown;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin-right: 0%;
+}
