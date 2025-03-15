@@ -45,6 +45,12 @@ function validateForm(event) {
       alert("Form submitted successfully!");
       // For actual form submission, you would use:
       // document.getElementById("signupForm").submit();
+    
+      setTimeout(function() {
+        window.location.href = './todo.html';
+    }, 1000);//linking a document in js .set time out helps escape the window ur in to another page without seeing ur refreshing the page (1000)is the time in milliseconds
+    
+    
     }
   }
   
